@@ -24,7 +24,7 @@ import os
 
 #Set data directory (adjust if needed)
 DATA_DIR = os.path.abspath(os.path.join(os.getcwd(), "../../", "Data"))
-DEFAULT_FILE = "cox-violent-parsed_filt.csv"  # Set a default file
+DEFAULT_FILE = "cox-violent-parsed_filt.csv"
 
 def load_data(filename=DEFAULT_FILE):
     """Loads a predefined CSV file from the Data directory."""
