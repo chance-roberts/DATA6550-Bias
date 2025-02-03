@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-# List of required packages
+#List of required packages
 REQUIRED_PACKAGES = ["pandas", "numpy", "matplotlib"]
 
 def install_missing_packages():
@@ -22,7 +22,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-# Set data directory (adjust if needed)
+#Set data directory (adjust if needed)
 DATA_DIR = os.path.abspath(os.path.join(os.getcwd(), "../../", "Data"))
 DEFAULT_FILE = "cox-violent-parsed_filt.csv"  # Set a default file
 
