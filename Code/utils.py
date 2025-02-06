@@ -20,9 +20,10 @@ install_missing_packages()
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 import os
 
-#Set data directory (adjust if needed)
+#Set data directory
 DATA_DIR = os.path.abspath(os.path.join(os.getcwd(), "../../", "Data"))
 DEFAULT_FILE = "cox-violent-parsed_filt.csv"
 
@@ -31,7 +32,7 @@ def load_data(filename=DEFAULT_FILE):
     file_path = os.path.join(DATA_DIR, filename)
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"File {filename} not found in {DATA_DIR}")
-    return pd.read_csv(file_path)
+    return pd.read_csv(file_path, low_memory=False)
 
 if __name__ == "__main__":
     print("✅ Utils script loaded successfully.")
